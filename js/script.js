@@ -158,3 +158,12 @@ function separador(){
     const result=str.join("-")
     document.getElementById("resultadop").innerHTML=result
 }
+
+
+function calculadoraRecaudacion(){
+    const str=(prompt("ingrese objetos pedidos con sus respectivos totales en formato nombre:total", "hamburguesa:8.75")).split(",")
+    const recaudacioncu= str.map(i => Number(i.substring(i.indexOf(":")+1)))
+    let rectotal=0;
+    recaudacioncu.forEach(rec=>rectotal+=rec)
+    document.getElementById("resultadop").innerHTML=rectotal
+}
